@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>APIHéroes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<p class="descripcion">
+Explora un catálogo de héroes con información detallada, imágenes y estadísticas. Puedes buscar personajes, ver sus datos, guardarlos como favoritos y descubrir héroes aleatoriamente de forma rápida e interactiva.
+</p>
+  <h1>Héroes</h1>
+</header>
+
+<section class="controls">
+  <input id="search-input" placeholder="Buscar héroe">
+  <button id="search-btn">Buscar</button>
+  <button id="random-btn">Aleatorio</button>
+  <button id="another-btn">Otro</button>
+  <button onclick="filtrarMarvel()">Marvel</button>
+  <button onclick="ordenarAZ()">A-Z</button>
+
+  <select id="hero-select">
+    <option value="">Selecciona un personaje</option>
+  </select>
+  <button id="btnSelect">Mostrar</button>
+</section>
+
+<section>
+  <h2>Resultados</h2>
+  <div id="hero-container" class="grid"></div>
+</section>
+
+<section>
+  <h2>Favoritos</h2>
+  <div id="favorites-container" class="grid"></div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close">Cerrar</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="api.js"></script>
+</body>
+</html>
